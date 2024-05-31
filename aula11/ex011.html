@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de País</title>
+</head>
+<body>
+    <h1>Descubra se você é brasileiro</h1>
+    De onde você é? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar!" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var pais = window.document.getElementById('txtpais')
+            var res =  window.document.getElementById('res')
+            var local = pais.value
+            res.innerHTML = `<p>Seu país é <strong>${local}</strong></p>`
+            res.innerHTML +=`Vivendo em ${local}`
+            if (local == 'Brasil') {
+            res.innerHTML += '<p> Você é Brasileiro </p>'
+            } else {
+            res.innerHTML += '<p>Você é gringo!</p>'
+            }
+        }
+    </script>
+</body>
+</html> 
